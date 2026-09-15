@@ -18,7 +18,7 @@ const ProfileSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    status: {
+    skills: {
         type: [String],
         required: true
     },
@@ -26,8 +26,7 @@ const ProfileSchema = new mongoose.Schema({
         type: String
     },
     githubusername: {
-        type: Date,
-        default: Date.now
+        type: String
     },
     experience: [{
         title: {
@@ -84,7 +83,7 @@ const ProfileSchema = new mongoose.Schema({
             type: String
         }
     }],
-    socail: {
+    social: {
         youtube: {
             type: String
         },
