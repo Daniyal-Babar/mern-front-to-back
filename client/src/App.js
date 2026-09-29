@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Login from './components/auth/Login';
@@ -15,6 +15,7 @@ import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
+import NotFound from './components/layout/NotFound';
 
 import { Provider } from 'react-redux';
 import store from './store';
@@ -39,10 +40,14 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Landing />} />
-          </Routes>
-          <section className="container">
-            <Alert />
-            <Routes>
+            <Route
+              element={
+                <section className="container">
+                  <Alert />
+                  <Outlet />
+                </section>
+              }
+            >
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route path="/profiles" element={<Profiles />} />
@@ -75,8 +80,9 @@ const App = () => {
                 path="/posts/:id"
                 element={<PrivateRoute component={Post} />}
               />
-            </Routes>
-          </section>
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
         </>
       </Router>
     </Provider>
