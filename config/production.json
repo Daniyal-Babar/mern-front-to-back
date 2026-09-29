@@ -1,5 +1,5 @@
 {
-    "MONGODB_URI": "mongodb://daniyalbabar345_db_user:Lucid_27@ac-rvg6yhz-shard-00-00.anbyypz.mongodb.net:27017,ac-rvg6yhz-shard-00-01.anbyypz.mongodb.net:27017,ac-rvg6yhz-shard-00-02.anbyypz.mongodb.net:27017/?ssl=true&replicaSet=atlas-vfpfyd-shard-0&authSource=admin&appName=Cluster1",
+    "MONGODB_URI": "mongodb://daniyal:Lgsao_5788838@ac-rvg6yhz-shard-00-00.anbyypz.mongodb.net:27017,ac-rvg6yhz-shard-00-01.anbyypz.mongodb.net:27017,ac-rvg6yhz-shard-00-02.anbyypz.mongodb.net:27017/?ssl=true&replicaSet=atlas-vfpfyd-shard-0&authSource=admin&appName=Cluster1",
     "jwtSecret": "mysecrettoken",
     "githubClientId":"Ov23li7CtutwgFG3oFzI",
     "githubSecret":"014913ddf9d3c7ba7700cf1aa82ed6d3bb953e8d"
