@@ -22,7 +22,7 @@ router.post('/', [
 
     try {
 
-        let user = await User.findOneAndDelete({ email });
+        let user = await User.findOne({ email });
 
         if (user) {
             return res.status(400).json({ errors: [{ msg: 'User Already Exists' }] });
